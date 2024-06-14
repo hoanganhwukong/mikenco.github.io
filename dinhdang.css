@@ -50,13 +50,40 @@ body {
 }
 
 .logo img {
-    height: 50px;
+    height: 70px;
 }
 
 .icon {
     height: 20px;
     margin-left: 10px;
 }
+/* CSS cho thanh tìm kiếm */
+.search-form {
+    display: none;
+    position: absolute;
+    top: 100%; /* Hiển thị thanh tìm kiếm bên dưới icon tìm kiếm */
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.search-form input[type="text"] {
+    width: 200px;
+    padding: 5px;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+}
+
+.search-form button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
 
 .so-luong-gio-hang {
     background-color: red;
@@ -148,7 +175,7 @@ body {
 }
 
 .btn {
-    background-color: #ffcc00;
+    background-color: #fff;
     color: #333;
     padding: 10px 20px;
     text-decoration: none;
@@ -158,8 +185,8 @@ body {
 }
 
 .btn:hover {
-    background-color: #333;
-    color: #ffcc00;
+    background-color: #efeaea;
+    color: #ffffff;
 }
 
 /* Section Styles */
@@ -175,7 +202,7 @@ body {
 }
 
 .section h2 {
-    font-size: 36px;
+    font-size: 30px;
     margin-bottom: 20px;
     position: relative;
     display: inline-block;
@@ -185,11 +212,11 @@ body {
     content: '';
     position: absolute;
     left: 50%;
-    bottom: -10px;
+    bottom: -50px;
     transform: translateX(-50%);
     height: 4px;
     width: 50px;
-    background-color: #ffcc00;
+    background-color: brown;
 }
 
 .section p {
@@ -227,8 +254,8 @@ body {
 }
 
 .product img {
-    width: 200px;
-    height: 450px;
+    width: 150px;
+    height: 200px;
     object-fit: cover;
 }
 

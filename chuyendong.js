@@ -7,7 +7,7 @@ window.addEventListener('load', function() {
 
     function moveProducts() {
         if (isMoving) {
-            currentPosition -= 1;
+            currentPosition -= 3;
 
             productsContainer.style.transform = `translateX(${currentPosition}px)`;
 

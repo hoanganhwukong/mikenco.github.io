@@ -1,0 +1,281 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: black; /* Thay đổi màu nền thành đen */
+    color: white; /* Thay đổi màu chữ thành trắng */
+    line-height: 1.6;
+}
+
+
+/* Thanh điều hướng */
+.thanh-dieu-huong {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: black;
+    padding: 10px 20px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.thanh-dieu-huong a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 10px 15px;
+    transition: background-color 0.3s, color 0.3s;
+    font-weight: bold;
+}
+
+.thanh-dieu-huong a:hover {
+    background-color: #555;
+    color: #ffcc00;
+}
+
+.nut-menu {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.logo img {
+    height: 70px;
+}
+
+.icon {
+    height: 20px;
+    margin-left: 10px;
+}
+
+.so-luong-gio-hang {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    position: relative;
+    top: -10px;
+    left: -10px;
+}
+
+/* Dropdown chọn ngôn ngữ */
+.chon-ngon-ngu {
+    position: relative;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.chon-ngon-ngu .dropdown {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 50px;
+    z-index: 1;
+}
+
+.chon-ngon-ngu .dropdown a {
+    color: white;
+    padding: 10px;
+    display: block;
+    text-align: left;
+}
+
+.chon-ngon-ngu:hover .dropdown {
+    display: block;
+}
+
+/* Layout cụ thể cho phần trung gian, bên trái và bên phải */
+.thanh-ben-trai, .thanh-giua, .thanh-ben-phai {
+    display: flex;
+    align-items: center;
+}
+
+.thanh-giua {
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.thanh-ben-phai {
+    justify-content: flex-end;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+main {
+    padding: 2rem;
+}
+
+h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 0.5rem;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 cột có độ rộng bằng nhau */
+    gap: 10px; /* Khoảng cách giữa các ô */
+    padding: 20px; /* Khoảng cách ngoài cùng */
+}
+
+.cell {
+    border: 1px solid #ccc; /* Viền đường biên */
+    padding: 10px; /* Khoảng cách bên trong ô */
+    text-align: center; /* Căn giữa nội dung */
+}
+
+.level {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+}
+
+.level-info {
+    text-align: center;
+    flex: 1;
+    padding: 1rem;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.level-info h3 {
+    color: #333;
+}
+
+.conditions,
+.promotion,
+.rules {
+    margin-bottom: 2rem;
+}
+
+.conditions ul,
+.promotion ul,
+.rules ul {
+    list-style-type: disc;
+    margin-left: 2rem;
+}
+
+
+
+/* Footer Styles */
+footer {
+    background-color: #222;
+    color: white;
+    padding: 50px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact,
+.order-check {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.order-check form {
+    display: flex;
+}
+
+.order-check input[type="text"] {
+    width: 150px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+
+.order-check button {
+    background-color: #ffcc00;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.social-links {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.social-links li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-links li a {
+    color: white;
+    text-decoration: none;
+}
+
+.company-info {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+.left, .right {
+    width: 45%;
+}
+.middle-line {
+    width: 1px;
+    height: 100%;
+    background-color: #fff;
+    margin: 0 10px;
+}
+.right {
+    text-align: right;
+}
+.left h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+.right p {
+    font-size: 18px;
+}
+.right a {
+    margin-right:235px;
+}
+.right .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #fff;
+    border-radius: 25px;
+    text-decoration: none;
+    color: #fff;
+    margin-top: 20px;
+}

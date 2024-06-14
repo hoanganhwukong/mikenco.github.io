@@ -1,0 +1,25 @@
+.search-form {
+    display: none; /* Ẩn thanh tìm kiếm ban đầu */
+    position: absolute;
+    top: 100%; /* Đặt vị trí nằm bên dưới icon tìm kiếm */
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 1000; /* Đảm bảo thanh tìm kiếm hiển thị trên các phần tử khác */
+}
+
+.search-form input[type="text"] {
+    width: 200px;
+    padding: 5px;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+}
+
+.search-form button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
