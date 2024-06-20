@@ -5,43 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="program.css"> 
     <script src="shop.js"></script>
-
-    <!-- Liên kết CSS -->   
     <title>MIKENCO® - Program</title>
 </head>
 <body>
     <nav class="thanh-dieu-huong">
         <div class="thanh-ben-trai">
             <button class="nut-menu">&#9776;</button>
-            <a href="index.html">Home</a>  <a href="shop.html">Shop</a>  <a href="mikencospace.html">Mikenco Space</a>  <a href="storymikenco.html">Our Story</a>
+            <a href="index.html">Home</a>  
+            <a href="shop.html">Shop</a>  
+            <a href="mikencospace.html">Mikenco Space</a>  
+            <a href="storymikenco.html">Our Story</a>
         </div>
         <div class="thanh-giua">
             <a href="#" class="logo"><img src="anh.mikenko.png" ></a>
         </div>
-        
-        <!-- Trong nav class="thanh-dieu-huong" -->
-<div class="thanh-ben-phai">
-    <a href="loyaltyprogram.html">Loyalty Program</a>
-    <div class="chon-ngon-ngu">
-        <span>VI</span>
-        <div class="dropdown">
-            <a href="#">VI</a>
-            <a href="#">EN</a>
-        </div>
-                       
+        <div class="thanh-ben-phai">
+            <a href="loyaltyprogram.html">Loyalty Program</a>
+            <div class="chon-ngon-ngu">
+                <span>VI</span>
+                <div class="dropdown">
+                    <a href="#">VI</a>
+                    <a href="#">EN</a>
+                </div>
             </div>
             <a href="#"><img src="anh.kinh.lup.jpg" alt="Tìm Kiếm" class="icon"></a>
-            <a href="#"><img src="anh.icon.png" alt="Người Dùng" class="icon"></a>
-            
-            <a href="#"><img src="anh.gio.hang.png" alt="Giỏ Hàng" class="icon"><span class="so-luong-gio-hang">0</span></a>
+            <a href="trangcanhan.html"><img src="anh.icon.png" alt="Người Dùng" class="icon"></a>
+            <a href="#" id="cartLink"><img src="anh.gio.hang.png" alt="Giỏ Hàng" class="icon"><span class="so-luong-gio-hang">0</span></a>
         </div>
-
-
-                
-
-
     </nav>
-     <header>
+    <header>
         <h1>Chính sách thành viên</h1>
     </header>
     <main>
@@ -98,8 +90,123 @@
         </section>
     </main>
     
+    <style>
+        .index-btn {
+            display: none; /* Ẩn nút Mở Modal */
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 1px solid white;
+            transition: background-color 0.3s, color 0.3s;
+        }
 
+        .index-btn:hover {
+            background-color: #555;
+        }
+
+        .index {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .index-body {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            color: black;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Modal Cart Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+
+    <!-- Modal Cart -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close cart-close">&times;</span>
+            <p style="color: black;">Giỏ hàng của bạn</p>
+            <!-- Nội dung giỏ hàng -->
+        </div>
+    </div>
     
+    <script>
+        // JavaScript để mở và đóng modal giỏ hàng
+        var cartModal = document.getElementById("cartModal");
+        var cartLink = document.getElementById("cartLink");
+        var cartCloseBtn = document.getElementsByClassName("cart-close")[0];
+
+        cartLink.onclick = function(event) {
+            event.preventDefault(); // Ngăn chặn hành động mặc định của liên kết
+            cartModal.style.display = "flex";
+        }
+
+        cartCloseBtn.onclick = function() {
+            cartModal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == cartModal) {
+                cartModal.style.display = "none";
+            }
+        }
+    </script>
 
     <footer>
         <div class="footer-content">
@@ -129,6 +236,5 @@
             <p> XIN ĐIÊM 10 BÀI KIỂM TRA</p>
         </div>
     </footer>
-
 </body>
 </html>

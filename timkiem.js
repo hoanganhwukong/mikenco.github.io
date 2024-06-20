@@ -1,20 +1,21 @@
-// JavaScript để hiển thị/ẩn thanh tìm kiếm khi click vào biểu tượng tìm kiếm
-const searchIcon = document.getElementById('search-icon');
-const searchForm = document.getElementById('search-form');
+// Lấy modal và nút đóng
+var modal = document.getElementById('myModal');
+var span = document.getElementsByClassName('close')[0];
 
-searchIcon.addEventListener('click', function(event) {
-    event.preventDefault();
-    if (searchForm.style.display === 'block') {
-        searchForm.style.display = 'none';
-    } else {
-        searchForm.style.display = 'block';
-    }
+// Lấy phần tử Home và thêm sự kiện click
+var homeLink = document.getElementById('homeLink');
+homeLink.addEventListener('click', function() {
+    modal.style.display = 'block'; // Hiển thị modal khi click vào Home
 });
 
-// Bổ sung để ẩn thanh tìm kiếm khi click bất kỳ đâu ngoài form
-document.addEventListener('click', function(event) {
-    const isClickInside = searchForm.contains(event.target) || searchIcon.contains(event.target);
-    if (!isClickInside) {
-        searchForm.style.display = 'none';
+// Đóng modal khi click vào nút đóng (x)
+span.addEventListener('click', function() {
+    modal.style.display = 'none'; // Ẩn modal khi click vào nút đóng
+});
+
+// Đóng modal khi click bên ngoài vùng modal
+window.addEventListener('click', function(event) {
+    if (event.target == modal) {
+        modal.style.display = 'none';
     }
 });
